@@ -1,4 +1,4 @@
-//Quelle: https://www.youtube.com/watch?v=LctzGnxkrgs
+//Auf Grundlage von https://www.youtube.com/watch?v=LctzGnxkrgs
 function getParam(key = null){
     let currentURL = window.location.search;
     let url = new URLSearchParams(currentURL);
