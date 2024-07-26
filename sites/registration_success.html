@@ -53,7 +53,98 @@
     </nav>
 
     <main>
-        
+        <!-- Leerzeile -->
+        <div class="row"></div>
+
+        <!-- Content-Zeile -->
+        <div class="row justify-content-center">
+            <h1 class="text-success text-center mt-5">Registrierungsbestätigung</h1>
+            <div class="col-10 col-lg-7 bg-light m-5 p-3 rounded-5">
+                <form id="donationFormSuccess">
+                    <fieldset id="dsitibutionFieldsetSuccess" class="mb-4 mt-1">
+                        <legend>Die Spende wird bereitgestellt per:</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="rb_pickup_success"
+                                value="Abholung" disabled>
+                            <label class="form-check-label" for="rb_pickup_success">Abholung</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="rb_dropoff_success"
+                                value="Übergabe" disabled>
+                            <label class="form-check-label" for="rb_dropoff_success">Übergabe</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="pickupAdressFieldsetSuccess" class="my-4">
+                        <legend>Ihre Spende wird von folgender Adresse abgeholt:</legend>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text">PLZ</span>
+                            <input id="in_postcode_success" type="number" class="form-control" disabled>
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text">Stadt</span>
+                            <input id="in_city_success" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text">Anschrift</span>
+                            <input id="in_street_success" type="text" class="form-control" disabled>
+                        </div>
+                    </fieldset>
+                    <fieldset id="dropoffAdressFieldset" class="my-4">
+                        <legend>Sie haben Ihre Spende hier übergeben:</legend>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text"">PLZ</span>
+                            <input id="in_dropoff_postcode_success" type="number" class="form-control" value="80798" disabled>
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text">Stadt</span>
+                            <input id="in_dropoff_city_success" type="text" class="form-control" value="München" disabled>
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text">Anschrift</span>
+                            <input id="in_dropoff_street_success" type="text" class="form-control" value="Fantasiestraße 27" disabled>
+                        </div>
+                    </fieldset>
+                    <fieldset id="clothingTypeFieldsetSuccess" class="my-4"> 
+                        <legend>Es wird folgende Art von Kleidung gespendet:</legend>
+                        <select class="form-select form-select-md" id="sel_clothingType_success"disabled>
+                            <option value="" disabled selected>Wähle eine Spendenart</option>
+                            <option value="Alltagskleidung">Alltagskleidung</option>
+                            <option value="Schutz- und Wetterkleidung">Schutz- und Wetterkleidung</option>
+                            <option value="Unterwäsche und Schlafanzüge">Unterwäsche und Schlafanzüge</option>
+                            <option value="Schuhe und Stiefel">Schuhe und Stiefel</option>
+                            <option value="Kinder- und Babykleidung">Kinder- und Babykleidung</option>
+                            <option value="Bettwäsche und Handtücher">Bettwäsche und Handtücher</option>
+                            <option value="Rucksäcke und Taschen">Rucksäcke und Taschen</option>
+                          </select>
+                    </fieldset>
+                    <fieldset id="crisisAreaFieldsetSuccess" class="my-4">
+                        <legend>Die Spende geht in folgendes Krisengebiet:</legend>
+                        <select class="form-select form-select-md" id="sel_crysisArea_success" disabled>
+                            <option value="" disabled selected>Wähle ein Krisengebiet</option>
+                            <option value="Keine Präferenz">Keine Präferenz</option>
+                            <option value="Sturmschäden (NRW)">Sturmschäden (NRW)</option>
+                            <option value="Hitzewelle (Deutschland)">Hitzewelle (Deutschland)</option>
+                            <option value="Waldbrände (Italien)">Waldbrände (Italien)</option>
+                            <option value="Waldbrände (Kanada)">Waldbrände (Kanada)</option>
+                          </select>
+                    </fieldset>
+                    <fieldset id="timestampRegistrationSuccess">
+                        <legend>Zeitpunkt der Registrierung</legend>
+                        <div class="input-group input-group-md my-1">
+                            <input id="in_timestamp_success" type="text" class="form-control" disabled>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Leerzeile -->
+        <div class="row justify-content-center text-center">
+            <div class="col-10 col-lg-7 ">
+                <button type="button" class="btn btn-secondary btn-lg" onclick="window.location.href='../index.html'">Zurück zur Startseite</button>
+                <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='/sites/register_donation.html'">Weitere Spende registrieren</button>
+            </div>
+        </div>
     </main>
 
     <footer class="footer bg-dark">
