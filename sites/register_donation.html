@@ -52,6 +52,79 @@
         </div>
     </nav>
 
+    <main>
+        <!-- Leerzeile -->
+        <div class="row"></div>
+
+        <!-- Content-Zeile -->
+        <div class="row justify-content-center">
+            <h1 class="text-primary text-center mt-5">Spendenanmeldung</h1>
+            <div class="col-10 col-lg-7 bg-light m-5 p-3 rounded-5">
+                <form id="donationForm" action="registration_success.html" method="get">
+                    <fieldset id="dsitibutionFieldset" class="mb-4 mt-1">
+                        <legend>Wie soll die Spende bereitgestellt werden?</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="distribution_type" id="rb_pickup"
+                                value="Abholung" onclick="togglePickupAdress()" required>
+                            <label class="form-check-label" for="rb_pickup">Abholung</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="distribution_type" id="rb_dropoff"
+                                value="Übergabe" onclick="togglePickupAdress()" required>
+                            <label class="form-check-label" for="rb_dropoff">Übergabe</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="pickupAdressFieldset" class="d-none my-4">
+                        <legend>Von welcher Adresse sollen wir die Spende abholen?</legend>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text" id="basic-addon1">PLZ</span>
+                            <input id="in_postcode" name="postcode" type="number" class="form-control" placeholder="80798" min="80331" max="80999">
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text" id="basic-addon1">Stadt</span>
+                            <input id="in_city" name="city" type="text" class="form-control" placeholder="München">
+                        </div>
+                        <div class="input-group input-group-md my-1">
+                            <span class="input-group-text" id="basic-addon1">Anschrift</span>
+                            <input id="in_street" name="street" type="text" class="form-control" placeholder="Fantasiestraße 27">
+                        </div>
+                    </fieldset>
+                    <fieldset id="clothingTypeFieldset" class="my-4"> 
+                        <legend>Welche Art von Kleidung wird gespendet?</legend>
+                        <select class="form-select form-select-md" id="sel_clothingType" name="clothing_type" required>
+                            <option value="" disabled selected>Wähle eine Spendenart</option>
+                            <option value="Alltagskleidung">Alltagskleidung</option>
+                            <option value="Schutz- und Wetterkleidung">Schutz- und Wetterkleidung</option>
+                            <option value="Unterwäsche und Schlafanzüge">Unterwäsche und Schlafanzüge</option>
+                            <option value="Schuhe und Stiefel">Schuhe und Stiefel</option>
+                            <option value="Kinder- und Babykleidung">Kinder- und Babykleidung</option>
+                            <option value="Bettwäsche und Handtücher">Bettwäsche und Handtücher</option>
+                            <option value="Rucksäcke und Taschen">Rucksäcke und Taschen</option>
+                          </select>
+                    </fieldset>
+                    <fieldset id="crisisAreaFieldset" class="my-4">
+                        <legend>Welches Krisengebiet soll die Spende unterstützen?</legend>
+                        <select class="form-select form-select-md" id="sel_crysisArea" name="crysis_area" required>
+                            <option value="" disabled selected>Wähle ein Krisengebiet</option>
+                            <option value="Keine Präferenz">Keine Präferenz</option>
+                            <option value="Sturmschäden (NRW)">Sturmschäden (NRW)</option>
+                            <option value="Hitzewelle (Deutschland)">Hitzewelle (Deutschland)</option>
+                            <option value="Waldbrände (Italien)">Waldbrände (Italien)</option>
+                            <option value="Waldbrände (Kanada)">Waldbrände (Kanada)</option>
+                          </select>
+                        </fieldset>
+                        <fieldset id="formButtons" class="mt-4 mb-1">
+                            <button type="button" id="btn_back_4" class="btn btn-secondary" onclick="backFrom4()">Abbrechen</button>
+                            <button type="submit" id="btn_submit_form" class="btn btn-success">Spende registrieren</button>
+                        </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Leerzeile -->
+        <div class="row"></div>
+    </main>
+
     <footer class="footer bg-dark">
         <ul class="nav justify-content-center border-bottom m-3 d-none d-lg-flex">
             <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-white">Startseite</a></li>
@@ -61,4 +134,7 @@
         </ul>
         <p class="text-center text-white m-3 p-2">© 2024 Krisenkleidung</p>
     </footer>
+
+    <!-- Für schnelleres Laden am Ende JS-Script einbinden-->
+    <script src="/scripts/app_registration.js"></script>
 </body>
