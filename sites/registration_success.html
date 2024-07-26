@@ -74,7 +74,7 @@
                             <label class="form-check-label" for="rb_dropoff_success">Übergabe</label>
                         </div>
                     </fieldset>
-                    <fieldset id="pickupAdressFieldsetSuccess" class="my-4">
+                    <fieldset id="pickupAdressFieldsetSuccess" class="my-4 d-none">
                         <legend>Ihre Spende wird von folgender Adresse abgeholt:</legend>
                         <div class="input-group input-group-md my-1">
                             <span class="input-group-text">PLZ</span>
@@ -89,19 +89,19 @@
                             <input id="in_street_success" type="text" class="form-control" disabled>
                         </div>
                     </fieldset>
-                    <fieldset id="dropoffAdressFieldset" class="my-4">
+                    <fieldset id="dropoffAdressFieldset" class="my-4 d-none">
                         <legend>Sie haben Ihre Spende hier übergeben:</legend>
                         <div class="input-group input-group-md my-1">
                             <span class="input-group-text"">PLZ</span>
-                            <input id="in_dropoff_postcode_success" type="number" class="form-control" value="80798" disabled>
+                            <input id="in_dropoff_postcode_success" type="number" class="form-control" disabled>
                         </div>
                         <div class="input-group input-group-md my-1">
                             <span class="input-group-text">Stadt</span>
-                            <input id="in_dropoff_city_success" type="text" class="form-control" value="München" disabled>
+                            <input id="in_dropoff_city_success" type="text" class="form-control" disabled>
                         </div>
                         <div class="input-group input-group-md my-1">
                             <span class="input-group-text">Anschrift</span>
-                            <input id="in_dropoff_street_success" type="text" class="form-control" value="Fantasiestraße 27" disabled>
+                            <input id="in_dropoff_street_success" type="text" class="form-control" disabled>
                         </div>
                     </fieldset>
                     <fieldset id="clothingTypeFieldsetSuccess" class="my-4"> 
@@ -156,4 +156,7 @@
         </ul>
         <p class="text-center text-white m-3 p-2">© 2024 Krisenkleidung</p>
     </footer>
+
+    <!-- Für schnelleres Laden am Ende JS-Script einbinden-->
+    <script src="/scripts/app_registration_success.js"></script>
 </body>
