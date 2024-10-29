@@ -26,7 +26,7 @@ function displayConfirmationData() {
         document.getElementById("in_postcode_success").value = getParam("postcode");
         document.getElementById("in_city_success").value = getParam("city");
         document.getElementById("in_street_success").value = getParam("street");
-    }else if(getParam("distribution_type") === "Übergabe"){
+    }else if(getParam("distribution_type") === "Übergabe an der Geschäftsstelle"){
         document.getElementById("rb_dropoff_success").checked = true;
         document.getElementById("dropoffAdressFieldset").classList.remove("d-none");
         document.getElementById("in_dropoff_postcode_success").value = "80798";
